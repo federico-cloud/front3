@@ -1,11 +1,33 @@
+import { useState } from "react";
+import { Formulario } from "./components/Formulario";
+import "./styles/index.css"
+import { Card } from "./components/Card";
+
 function App() {
-  //Aqui deberias agregar los estados y los handlers para los inputs
+
+  
+  const [data, setData] = useState({
+    categoria: "fede",
+    nombre: ""
+  });
+  
+  const [error, setError] = useState(false);
+  const [send, setSend] = useState(false)
+  console.log(data.nombre)
 
   return (
-    <div className="App">
-      <h1>Elige un color</h1>
-      <form>{/* aqui deberias escribir tu codigo */}</form>
-    </div>
+
+    <>
+      <h1>Dime tu juego favorito</h1>
+      <Formulario
+        data={data}
+        setData={setData}
+        error={error}
+        setError={setError}
+        send={send}
+        setSend={setSend}
+      />
+    </>
   );
 }
 

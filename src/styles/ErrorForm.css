@@ -1,0 +1,15 @@
+.divError{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+span{
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+  background-color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
